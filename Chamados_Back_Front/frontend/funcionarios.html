@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Funcionarios</title>
+	<link rel="stylesheet" href="./estilos/style.css">
+	<script src="./scripts/script.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./clientes.html">Clientes</a></li>
+			<li><a href="./funcionarios.html">Funcionarios</a></li>
+			<li><a href="./chamados.html">Chamados</a></li>
+			<li><a href="./usuarios.html">Usuarios</a></li>
+		</ul>
+	</nav>
+
+	<h1>Cadastro de Funcionarios</h1>
+	<div class="form">
+		<input id="nome-funcionario" placeholder="Nome Completo" type="text" onblur="validaNome(this.id)" />
+		<input id="cpfcnpj-funcionario" placeholder="CPF / CNPJ" type="text" onblur="validaCPF(this.id)" required minlength="11" />
+		<input id="especializacao-funcionario" placeholder="Especialização" type="text" />
+		<button onclick="cadastrarFuncionario()">Cadastrar</button>
+	</div>
+
+	<div class="form">
+		<button onclick="listarFuncionarios()">Listar Funcionarios</button>
+		<div id="lista-funcionarios"></div>
+	</div>
+</body>
+
+</html>

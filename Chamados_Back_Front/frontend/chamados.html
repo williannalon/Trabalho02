@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chamados</title>
+	<link rel="stylesheet" href="./estilos/style.css">
+	<script src="./scripts/script.js"></script>
+</head>
+
+<body onload="carregarClientes(), carregarFuncionarios()">
+	<nav>
+		<ul>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./clientes.html">Clientes</a></li>
+			<li><a href="./funcionarios.html">Funcionarios</a></li>
+			<li><a href="./chamados.html">Chamados</a></li>
+			<li><a href="./usuarios.html">Usuarios</a></li>
+		</ul>
+	</nav>
+
+	<h1>Cadastro de Chamados</h1>
+	<div class="form">
+		<input id="status-chamado" value="Aberto" type="text" disabled=true />
+		<input id="descricao-chamado" placeholder="Descrição do Chamado" type="text" />
+		<input id="natureza-chamado" placeholder="Natureza do Chamado" type="text" />
+		<!-- <input id="id-cliente-chamado" placeholder="Cliente do Chamado" type="text" /> -->
+
+		<!-- função para carregar a listas automaticamente esta no load do body-->
+		<select id="id-cliente-chamado">
+			<option value="" disabled selected>Selecione o Cliente</option>
+		</select>
+		<select id="id-funcionario-chamado">
+			<!-- <option value="" disabled selected>Selecione o Funcionario</option> -->
+		</select>
+		
+		<button onclick="cadastrarChamado()">Cadastrar</button>
+	</div>
+
+	<div class="form">
+		<button onclick="listarChamados()">Listar Chamados</button>
+		<div id="lista-chamados"></div>
+	</div>
+</body>
+
+</html>

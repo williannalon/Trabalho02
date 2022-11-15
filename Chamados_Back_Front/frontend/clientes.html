@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clientes</title>
+	<link rel="stylesheet" href="./estilos/style.css">
+	<script src="./scripts/script.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./clientes.html">Clientes</a></li>
+			<li><a href="./funcionarios.html">Funcionarios</a></li>
+			<li><a href="./chamados.html">Chamados</a></li>
+			<li><a href="./usuarios.html">Usuarios</a></li>
+		</ul>
+	</nav>
+
+	<h1>Cadastro de Cliente</h1>
+	<div class="form">
+		<input id="nome-cliente" placeholder="Nome Completo" type="text" onblur="validaNome(this.id)" />
+		<input id="cpfcnpj-cliente" placeholder="CPF / CNPJ" type="text"   onblur="validaCPF(this.id)" required minlength="11" />
+		<input id="empresa-cliente" placeholder="Empresa" type="text" />
+		<button onclick="cadastrarCliente()">Cadastrar</button>
+	</div>
+
+	<div class="form">
+		<button onclick="listarClientes();">Listar clientes</button>
+		<div id="lista-clientes"></div>
+	</div>
+</body>
+
+</html>
